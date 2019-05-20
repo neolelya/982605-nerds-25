@@ -115,21 +115,15 @@
           </fieldset>
           <fieldset class="grid-kind">
             <legend>Сетка:</legend>
-            <p class="active">
               <label>
                 <input type="radio" name="grid-radio" value="adaptive" checked>Адаптивная
               </label>
-            </p>
-            <p>
               <label>
                 <input type="radio" name="grid-radio" value="fixed">Фиксированная
               </label>
-            </p>
-            <p>
               <label>
                 <input type="radio" name="grid-radio" value="fluid">Резиновая
               </label>
-            </p>
           </fieldset>
           <fieldset class="features-option">
             <legend>Особенности:</legend>
@@ -175,10 +169,14 @@
             <a href="#">По названию</a>
           </li>
           <li>
-            <a href="#">&#9660;</a>
+            <a href="#">
+              <img src="img/icon-down-dir.svg" alt="Сортировать по уменьшению цены" width="11" height="10">
+            </a>
           </li>
           <li>
-            <a href="#">&#9650;</a>
+            <a href="#">
+              <img src="img/icon-up-dir.svg" alt="Сортировать по возрастанию цены" width="11" height="10">
+            </a>
           </li>
         </ul>
       </section>
@@ -231,24 +229,18 @@
     </footer>
 
     <section class="write-to-us">
+      <h2>Напишите нам</h2>
       <form action="" method="post">
-        <h2>Напишите нам</h2>
         <p>
           <label for="field-name">Ваше имя:</label>
-        </p>
-        <p>
           <input type="text" id="field-name" name="name" placeholder="Имя Фамилия">
         </p>
         <p>
           <label for="field-email">Ваш e-mail:</label>
-        </p>
-        <p>
           <input type="text" id="field-email" name="email" placeholder="email@example.com">
         </p>
         <p>
           <label for="field-message">Текст письма:</label>
-        </p>
-        <p>
           <textarea id="field-message" placeholder="В свободной форме" name="message" cols="50" rows="10"></textarea>
         </p>
         <button class="button">
