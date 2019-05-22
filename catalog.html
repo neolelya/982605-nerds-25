@@ -29,9 +29,36 @@
         </a>
       </nav>
     </header>
+
+    <h1>Магазин готовых шаблонов</h1>
+
     <main>
-      <h1>Магазин готовых шаблонов</h1>
       <section class="site-to-go">
+        <h2 class="visually-hidden">Варианты готовых шаблонов</h2>
+        <div class="sorting-list">
+          <b>Сортировать:</b>
+          <ul>
+            <li>
+              <a href="#">По цене</a>
+            </li>
+            <li>
+              <a href="#">По типу</a>
+            </li>
+            <li>
+              <a href="#">По названию</a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/icon-down-dir.svg" alt="Сортировать по уменьшению цены" width="11" height="10">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/icon-up-dir.svg" alt="Сортировать по возрастанию цены" width="11" height="10">
+              </a>
+            </li>
+          </ul>
+        </div>
         <ul class="templates-list">
           <li>
             <article>
@@ -99,111 +126,89 @@
             </article>
           </li>
         </ul>
+        <nav>
+          <a href="catalog.html" class="button current">1</a>
+          <a href="#" class="button">2</a>
+          <a href="#" class="button">3</a>
+          <a href="#" class="button">Следующая</a>
+        </nav>
       </section>
-      <section class="side-form">
-        <form action="" method="post">
-          <fieldset class="cost">
-            <legend>Стоимость:</legend>
-            <p>
-              <label>От
-                <input type="number" name="cost-from" placeholder="0" value="0">
-              </label>
-              <label>До
-                <input type="number" name="cost-from" placeholder="15 000" value="15000">
-              </label>
-            </p>
-          </fieldset>
-          <fieldset class="grid-kind">
-            <legend>Сетка:</legend>
-              <label>
-                <input type="radio" name="grid-radio" value="adaptive" checked>Адаптивная
-              </label>
-              <label>
-                <input type="radio" name="grid-radio" value="fixed">Фиксированная
-              </label>
-              <label>
-                <input type="radio" name="grid-radio" value="fluid">Резиновая
-              </label>
-          </fieldset>
-          <fieldset class="features-option">
-            <legend>Особенности:</legend>
-              <p>
-                <label>
-                  <input type="checkbox" name="slider" checked>Слайдер
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input type="checkbox" name="benefits">Блок преимуществ
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input type="checkbox" name="news" checked>Новости
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input type="checkbox" name="gallery">Галерея
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input type="checkbox" name="card">Корзина
-                </label>
-              </p>
-          </fieldset>
-          <button class="button">Показать</button>
-        </form>
-      </section>
-      <section class="sorting-list">
-        <b>Сортировать:</b>
-        <ul>
-          <li>
-            <a href="#">По цене</a>
-          </li>
-          <li>
-            <a href="#">По типу</a>
-          </li>
-          <li>
-            <a href="#">По названию</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="img/icon-down-dir.svg" alt="Сортировать по уменьшению цены" width="11" height="10">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="img/icon-up-dir.svg" alt="Сортировать по возрастанию цены" width="11" height="10">
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <a href="catalog.html" class="button current">1</a>
-        <a href="#" class="button">2</a>
-        <a href="#" class="button">3</a>
-        <a href="#" class="button">Следующая</a>
-      </section>
+
+      <form action="" method="post">
+        <fieldset class="cost">
+          <legend>Стоимость:</legend>
+          <p>
+            <label>От
+              <input type="number" name="cost-from" placeholder="0" value="0">
+            </label>
+            <label>До
+              <input type="number" name="cost-from" placeholder="15 000" value="15000">
+            </label>
+          </p>
+        </fieldset>
+        <fieldset class="grid-kind">
+          <legend>Сетка:</legend>
+          <p>
+            <label>
+              <input type="radio" name="grid-radio" value="adaptive" checked>Адаптивная
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" name="grid-radio" value="fixed">Фиксированная
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" name="grid-radio" value="fluid">Резиновая
+            </label>
+          </p>
+        </fieldset>
+        <fieldset class="features-option">
+          <legend>Особенности:</legend>
+          <p>
+            <label>
+              <input type="checkbox" name="slider" checked>Слайдер
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="benefits">Блок преимуществ
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="news" checked>Новости
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="gallery">Галерея
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="card">Корзина
+            </label>
+          </p>
+        </fieldset>
+        <button class="button">Показать</button>
+      </form>
     </main>
+
     <footer>
-      <section class="adress">
+      <section class="address">
         <h2 class="visually-hidden">Карта проезда</h2>
         <img src="img/map.jpg" alt="Схема проезда">
         <div>
           <b>NЁRDS DESIGN STUDIO</b>
-          <p>
-            191186, Санкт-Петербург,<br>
-            ул. Б. Конюшенная, д. 19/8
-          </p>
-          <p>
-            тел. +7 (812) 275-75-75
-          </p>
-          <a href="write-us.html">Напишите нам</a>
+          <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+          <p>тел. +7 (812) 275-75-75</p>
+          <a href="#">Напишите нам</a>
         </div>
       </section>
       <section>
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="socials">
           <li>
             <a href="https://vk.com">
@@ -222,10 +227,8 @@
           </li>
         </ul>
       </section>
-      <section>
-        <b>Давайте дружить, это выгодно!</b>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
-      </section>
+      <p><b>Давайте дружить, это выгодно!</b></p>
+      <p>Скидка 10% для друзей из социальных сетей.</p>
     </footer>
 
     <section class="write-to-us">
@@ -247,9 +250,7 @@
           Отправить
         </button>
       </form>
-      <button type="button">
-        X
-      </button>
+      <button type="button">Закрыть</button>
     </section>
 
   </body>
