@@ -13,6 +13,24 @@ body {
   color: #283136;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .main-navigation {
   font-size: 16px;
   line-height: 30px;
@@ -22,7 +40,7 @@ body {
   background-color: #eeeeee;
 }
 
-.navigation-list {
+.main-navigation ul {
   list-style-type: none;
 }
 
@@ -31,12 +49,12 @@ body {
   text-decoration: none;
 }
 
-.logo:hover,
-.logo:focus {
+.site-logo:hover,
+.site-logo:focus {
   opacity: 0.8;
 }
 
-.logo:active {
+.site-logo:active {
   opacity: 0.3;
 }
 
@@ -46,11 +64,12 @@ body {
 }
 
 .main-navigation a:active {
-  color: #01a25e;
+  opacity: 0.3;
+  color: #000000;
 }
 
-.current a {
-border-bottom: 2px solid #fb565a;
+.current-menu a {
+  border-bottom: 2px solid #fb565a;
 }
 
 .service-list {
@@ -74,66 +93,82 @@ border-bottom: 2px solid #fb565a;
   color: #ffffff;
 }
 
-.sites-button {
+.button {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+
   background-color: #fb565a;
 }
 
-.sites-button:hover,
-.sites-button:focus {
+.button:hover,
+.button:focus {
   background-color: #e74246;
 }
 
-.sites-button:active {
+.button:active {
   color: #e37376;
   background-color: #d7373b;
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
-.apps-button {
+.button-green {
   background-color: #00ca74;
 }
 
-.apps-button:hover,
-.apps-button:focus {
+.button-green:hover,
+.button-green:focus {
   background-color: #00bc6c;
 }
 
-.apps-button:active {
+.button-green:active {
   color: #4dc491;
   background-color: #00aa62;
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
-.slides-button {
+.button-yellow {
   background-color: #efc84a;
 }
 
-.slides-button:hover,
-.slides-button:focus {
+.button-yellow:hover,
+.button-yellow:focus {
   background-color: #eab534;
 }
 
-.slides-button:active {
+.button-yellow:active {
   color: #edc265;
   background-color: #e5a722;
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
-.we-are {
+.sliders b {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.information-lead {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
   color: #000000;
 }
 
-.our-works {
+.information-offer {
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
+  text-transform: uppercase;
   color: #000000;
 }
 
-.our-works-list {
+.information-offer-list {
   list-style-type: none;
 }
 
@@ -146,7 +181,7 @@ border-bottom: 2px solid #fb565a;
   /*margin-bottom: 5px;*/
 /*}*/
 
-.our-beginning {
+.statistics-start {
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
@@ -168,26 +203,63 @@ border-bottom: 2px solid #fb565a;
   line-height: 18px;
 }
 
-.socials {
+.statistics-list sup {
+  position: relative;
+  top: -10px;
+  left: 0;
+}
+
+.partners-list {
+  list-style-type: none;
+}
+
+.partners a {
+  opacity: 0.2;
+}
+
+.partners a:hover,
+.partners a:focus {
+  opacity: 1;
+}
+
+.partners a:active {
+  opacity: 0.1;
+}
+
+.address-details b {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.address-details p {
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+}
+
+.socials-list {
   list-style: none;
 }
 
-.socials a {
+.socials-list a {
   background-color: #e1e1e1;
 }
 
-.socials a:hover,
-.socials a:focus {
+.socials-list a:hover,
+.socials-list a:focus {
   background-color: #e74246;
 }
 
-.socials a:active {
+.socials-list a:active {
   color: #e37376;
   background-color: #d7373b;
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
-.lets-be-friends {
+.friendship-offer {
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
@@ -198,6 +270,60 @@ border-bottom: 2px solid #fb565a;
   line-height: 22px;
 }
 
+.write-to-us h2 {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.write-to-us label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.write-to-us input,
+.write-to-us textarea {
+  font-size: 16px;
+  font-weight: 400;
+  color: #444444;
+  border: 2px solid #d7dcde;
+
+  opacity: 0.5;
+
+  outline: none;
+}
+
+.write-to-us input:hover,
+.write-to-us textarea:hover {
+  border-color: #b4b9bb;
+}
+
+.write-to-us input:focus,
+.write-to-us textarea:focus {
+  border-color: #000000;
+}
+
+.write-to-us input:invalid {
+  border-color: #e74246;
+}
+
+.exit {
+  color: #fb565a;
+  opacity: 0.3;
+}
+
+.exit:hover,
+.exit:focus {
+  opacity: 1;
+}
+
+.exit:active {
+  opacity: 0.1;
+}
+
 .shop-header {
   font-size: 55px;
   line-height: 55px;
@@ -206,6 +332,48 @@ border-bottom: 2px solid #fb565a;
 
   background-color: #eeeeee;
 }
+
+.sorting-list b {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.sorting-list ul {
+  list-style-type: none;
+}
+
+.sorting-list a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+
+  opacity: 0.3;
+}
+
+.sorting-list a:hover,
+.sorting-list a:focus {
+  opacity: 0.6;
+}
+
+.sorting-list .current,
+.sorting-list a:active {
+  opacity: 1;
+}
+
+legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+
 
 .templates-list{
   list-style: none;
@@ -253,27 +421,6 @@ border-bottom: 2px solid #fb565a;
   padding-top: 40px;
   opacity: 0.12;
   width: 360px;
-}
-
-.button {
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #ffffff;
-  text-decoration: none;
-
-  background-color: #fb565a;
-}
-
-.button:hover,
-.button:focus {
-  background-color: #e74246;
-}
-
-.button:active {
-  background-color: #d7373b;
-  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
 .page-nav-button {
@@ -327,6 +474,8 @@ fieldset {
   color: #000000;
   border: none;
 
+  outline: none;
+
   background-color: #eeeeee;
 }
 
@@ -345,10 +494,3 @@ fieldset {
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
-.sliders, .visually-hidden,
-.information, .statistics,
-.partners, .address,
-.write-to-us, .sorting-list,
-.cost {
-  display: none;
-}
