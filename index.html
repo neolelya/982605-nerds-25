@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-  <nav class="main-navigation">
+  <nav class="main-navigation container">
     <a href="index.html" class="site-logo">
       <img src="img/nerds-logo.svg" alt="Логотип дизайн студии Нёрдс" width="160" height="65">
     </a>
@@ -36,7 +36,7 @@
 <h1 class="visually-hidden">Дизайн студия Нёрдс</h1>
 
 <main>
-  <div class="sliders">
+  <div class="sliders container">
     <div class="slider-1 active">
       <b>
         Долго, дорого<br>скрупулезно.
@@ -71,7 +71,7 @@
     </div>
   </div>
 
-  <section class="services">
+  <section class="services container">
     <h2 class="visually-hidden">Услуги</h2>
     <ul class="service-list">
       <li class="service-sites">
@@ -101,38 +101,40 @@
     </ul>
   </section>
 
-  <section class="information">
-    <h2 class="visually-hidden">Информация о нас</h2>
-    <b class="information-lead">Мы - маленькая, но гордая дизайн-студия из Краснодара.</b>
-    <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
-      превыше креатива. Работаем не покладая рук, как роботы.</p>
-    <b class="information-offer">Выполняем заказы на разработку:</b>
-    <ul class="information-offer-list">
-      <li>Веб-сайтов любой сложности</li>
-      <li>Мобольных приложений для iOS и Android</li>
-      <li>Слайдшоу и видео для корпоративных презентаций</li>
-    </ul>
-  </section>
-  <section class="statistics">
-    <h2 class="visually-hidden">Статистика</h2>
-    <p class="statistics-start">С 2004 года любим точность во всем:</p>
-    <ul class="statistics-list">
-      <li>
-        <b>146<sup>%</sup></b>
-        <p>Уровень самоотдачи</p>
-      </li>
-      <li>
-        <b>100<sup>%</sup></b>
-        <p>Соблюдение сроков</p>
-      </li>
-      <li>
-        <b>50<sup>%</sup></b>
-        <p>Минимальная предоплата</p>
-      </li>
-    </ul>
-  </section>
+  <div class="information-wrapper container">
+    <section class="information">
+      <h2 class="visually-hidden">Информация о нас</h2>
+      <b class="information-lead">Мы - маленькая, но гордая дизайн-студия из Краснодара.</b>
+      <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
+        превыше креатива. Работаем не покладая рук, как роботы.</p>
+      <b class="information-offer">Выполняем заказы на разработку:</b>
+      <ul class="information-offer-list">
+        <li>Веб-сайтов любой сложности</li>
+        <li>Мобольных приложений для iOS и Android</li>
+        <li>Слайдшоу и видео для корпоративных презентаций</li>
+      </ul>
+    </section>
+    <section class="statistics">
+      <h2 class="visually-hidden">Статистика</h2>
+      <p class="statistics-start">С 2004 года любим точность во всем:</p>
+      <ul class="statistics-list">
+        <li>
+          <b>146<sup>%</sup></b>
+          <p>Уровень самоотдачи</p>
+        </li>
+        <li>
+          <b>100<sup>%</sup></b>
+          <p>Соблюдение сроков</p>
+        </li>
+        <li>
+          <b>50<sup>%</sup></b>
+          <p>Минимальная предоплата</p>
+        </li>
+      </ul>
+    </section>
+  </div>
 
-  <section class="partners">
+  <section class="partners container">
     <h2 class="visually-hidden">Партнеры</h2>
     <ul class="partners-list">
       <li>
@@ -169,7 +171,7 @@
       <a href="#" class="button">Напишите нам</a>
     </div>
   </section>
-  <section class="socials">
+  <section class="socials container">
     <h2 class="visually-hidden">Мы в социальных сетях</h2>
     <ul class="socials-list">
       <li>
@@ -188,14 +190,17 @@
         </a>
       </li>
     </ul>
+    <div>
+      <p class="friendship-offer"><b>Давайте дружить, это выгодно!</b></p>
+      <p class="sale">Скидка 10% для друзей из социальных сетей.</p>
+    </div>
   </section>
-  <p class="friendship-offer"><b>Давайте дружить, это выгодно!</b></p>
-  <p class="sale">Скидка 10% для друзей из социальных сетей.</p>
+
 </footer>
 
 <section class="write-to-us">
   <h2>Напишите нам</h2>
-  <form action="" method="post">
+  <form class="write-to-us-form" action="" method="post">
     <p>
       <label for="field-name">Ваше имя:</label>
       <input type="text" id="field-name" name="name" placeholder="Имя Фамилия">
@@ -208,9 +213,11 @@
       <label for="field-message">Текст письма:</label>
       <textarea id="field-message" placeholder="В свободной форме" name="message" cols="50" rows="10"></textarea>
     </p>
-    <button class="button">
-      Отправить
-    </button>
+    <span>
+      <button class="button">
+        Отправить
+      </button>
+    </span>
   </form>
   <button type="button" class="exit">Закрыть</button>
 </section>
