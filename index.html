@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <nav class="main-navigation">
+<header class="gray-background">
+  <nav class="main-navigation container">
     <a href="index.html" class="site-logo">
       <img src="img/nerds-logo.svg" alt="Логотип дизайн студии Нёрдс" width="160" height="65">
     </a>
@@ -27,31 +27,29 @@
         <a href="contacts.html">Контакты</a>
       </li>
     </ul>
-    <a href="cart.html" class="cart">
-      <img src="img/cart-icon.svg" alt="Корзина" width="15" height="15">Корзина
-    </a>
+    <a href="cart.html" class="cart">Корзина</a>
   </nav>
 </header>
 
 <h1 class="visually-hidden">Дизайн студия Нёрдс</h1>
 
 <main>
-  <div class="sliders">
-    <div class="slider-1 active">
+  <div class="sliders gray-background">
+    <div class="slider-1 active container ">
       <b>
-        Долго, дорого<br>скрупулезно.
+        Долго, дорого,<br>скрупулезно.
       </b>
       <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
       <a href="slide-1.html" class="button">Узнать больше</a>
     </div>
-    <div class="slider-2">
+    <div class="slider-2 container ">
       <b>
         Любим математику<br>как никто другой
       </b>
       <p>Никакого креатива, только математические формулы<br>для расчета идеальных пропорций.</p>
       <a href="slide-2.html" class="button">Узнать больше</a>
     </div>
-    <div class="slider-3">
+    <div class="slider-3 container ">
       <b>
         Только ночь,<br>только хардкор
       </b>
@@ -71,14 +69,14 @@
     </div>
   </div>
 
-  <section class="services">
+  <section class="services container with-separator">
     <h2 class="visually-hidden">Услуги</h2>
     <ul class="service-list">
       <li class="service-sites">
         <section>
           <img src="img/service-web-sites.jpg" alt="Сайты" width="300" height="146">
           <h3>Веб-сайты</h3>
-          <p>Мир никогда не будет прежним, после того, как увидит ваш сайт!</p>
+          <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
           <a class="button" href="#">Заказать</a>
         </section>
       </li>
@@ -101,16 +99,16 @@
     </ul>
   </section>
 
-  <div class="information-wrapper">
+  <div class="information-wrapper container with-separator">
     <section class="information">
       <h2 class="visually-hidden">Информация о нас</h2>
-      <b class="information-lead">Мы - маленькая, но гордая дизайн-студия из Краснодара.</b>
+      <b class="information-lead">Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
       <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
         превыше креатива. Работаем не покладая рук, как роботы.</p>
       <b class="information-offer">Выполняем заказы на разработку:</b>
       <ul class="information-offer-list">
         <li>Веб-сайтов любой сложности</li>
-        <li>Мобольных приложений для iOS и Android</li>
+        <li>Мобильных приложений для iOS и Android</li>
         <li>Слайдшоу и видео для корпоративных презентаций</li>
       </ul>
     </section>
@@ -134,24 +132,24 @@
     </section>
   </div>
 
-  <section class="partners">
+  <section class="partners container with-separator">
     <h2 class="visually-hidden">Партнеры</h2>
     <ul class="partners-list">
-      <li>
+      <li class="partner-htmlacademy">
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/html-academy-logo.png" alt="HTML Академия" width="199" height="68">
         </a>
       </li>
-      <li>
+      <li class="partner-borodinski">
         <a href="https://borodinski.ru">
           <img src="img/borodinski-logo.png" alt="Барбершоп Бородинский" width="209" height="87">
         </a>
       </li>
-      <li>
+      <li class="partner-pink">
         <a href="https://pink.ru"><img src="img/pink-logo.png" alt="Пинк" width="185" height="52">
         </a>
       </li>
-      <li>
+      <li class="partner-mishka">
         <a href="https://mishka.ru">
           <img src="img/mishka-logo.png" alt="Мишка" width="173" height="84">
         </a>
@@ -160,7 +158,7 @@
   </section>
 </main>
 
-<footer>
+<footer class="container">
   <section class="address">
     <h2 class="visually-hidden">Карта проезда</h2>
     <img src="img/map.jpg" alt="Схема проезда">
@@ -211,7 +209,7 @@
     </p>
     <p class="message-field">
       <label for="field-message">Текст письма:</label>
-      <textarea id="field-message" placeholder="В свободной форме" name="message" cols="50" rows="10"></textarea>
+      <textarea id="field-message" placeholder="В свободной форме" name="message" cols="50" rows="5"></textarea>
     </p>
     <span>
       <button class="button">
@@ -219,7 +217,7 @@
       </button>
     </span>
   </form>
-  <button type="button" class="exit">Закрыть</button>
+  <button type="button" class="exit" aria-label="Закрыть"></button>
 </section>
 
 </body>

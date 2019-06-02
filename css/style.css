@@ -31,15 +31,32 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-/*.container {*/
-/*  width: 1200px;*/
-/*  margin: 0 auto;*/
-/*}*/
+.gray-background {
+  width: 100%;
+  background-color: #eeeeee;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.with-separator::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #eeeeee;
+}
+
+
 
 .main-navigation {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  padding-bottom: 18px;
+  padding-top: 49px;
 
   font-size: 16px;
   line-height: 30px;
@@ -51,11 +68,19 @@ input[type="radio"].visually-hidden {
 
 .main-navigation ul {
   display: flex;
-  margin-top: 0;
+  margin-top: 26px;
   margin-bottom: 0;
-  padding-left: 0;
+  padding-left: 2px;
 
   list-style-type: none;
+}
+
+.main-navigation li {
+  margin-right: 46px;
+}
+
+.main-navigation li:last-child {
+  margin-right: 0;
 }
 
 .main-navigation a {
@@ -65,6 +90,7 @@ input[type="radio"].visually-hidden {
 
 .site-logo img {
   display: block;
+  margin-right: 200px;
 }
 
 .site-logo:hover,
@@ -86,29 +112,72 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.cart {
+  margin-top: 26px;
+  margin-left: auto;
+  padding-left: 40px;
+  background: 0 7px url("../img/cart-icon.svg") no-repeat;
+}
+
 .current-menu a {
   border-bottom: 2px solid #fb565a;
 }
 
+.sliders {
+  height: 415px;
+  overflow: hidden;
+
+  background-color: #eeeeee;
+}
+
 .sliders b {
+  display: inline-block;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: #000000;
+
+  margin-top: 60px;
 }
 
 .sliders p {
-  margin-top: 0;
+  margin-top: 28px;
   margin-bottom: 0;
+}
+
+.sliders a {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 38px;
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+.slider-1 {
+  height: 415px;
+  background: 450px 0 url("../img/slide-1.png") no-repeat;
+}
+
+.slider-2 {
+  height: 415px;
+  background: 450px 0 url("../img/slide-2.png") no-repeat;
+}
+
+.slider-3 {
+  height: 415px;
+  background: 450px 0 url("../img/slide-3.png") no-repeat;
+}
+
+.services {
+  padding-top: 80px;
 }
 
 .service-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 80px;
   padding-left: 0;
   list-style-type: none;
 }
@@ -119,17 +188,23 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 17px;
+  margin-bottom: 16px;
 }
 
 .service-list li {
   width: 300px;
+  margin-right: 100px;
+}
+
+.service-list li:last-child {
+  margin-right: 0;
 }
 
 .service-list p {
   margin-top: 0;
   margin-bottom: 0;
+  width: 260px;
 }
 
 .service-list a {
@@ -139,16 +214,22 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
+  margin-top: 32px;
 }
 
 .button {
+  display: inline-block;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
+  vertical-align: middle;
   color: #ffffff;
   text-decoration: none;
   border: none;
+  min-width: 160px;
+
+  padding: 16px 16px;
 
   background-color: #fb565a;
 }
@@ -197,16 +278,20 @@ input[type="radio"].visually-hidden {
 .information-wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 74px;
 }
 
 .information {
   width: 60%;
   min-width: 660px;
+  padding-bottom: 48px;
 }
 
 .statistics {
   width: 30%;
   min-width: 360px;
+  padding-bottom: 48px;
 }
 
 .information-lead {
@@ -217,8 +302,9 @@ input[type="radio"].visually-hidden {
 }
 
 .information p {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 33px;
+  margin-bottom: 40px;
+  width: 660px;
 }
 
 .information-offer {
@@ -230,24 +316,36 @@ input[type="radio"].visually-hidden {
 }
 
 .information-offer-list {
-  margin-top: 0;
+  margin-top: 24px;
   margin-bottom: 0;
+  padding-left: 0;
   list-style-type: none;
 }
 
-/*.our-works-list li::before {*/
-  /*content: "";*/
-  /*display: inline-block;*/
-  /*width: 23px;*/
-  /*border: 1px solid #fb565a;*/
+.information-offer-list li {
+  margin-bottom: 24px;
+}
 
-  /*margin-bottom: 5px;*/
-/*}*/
+.information-offer-list li::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  border: 1px solid #fb565a;
+
+  margin-bottom: 5px;
+  margin-right: 11px;
+}
+
+.statistics::before {
+  content: "";
+  display: block;
+  height: 208px;
+  background: 0 0 url("../img/nerds-illustration.jpg") no-repeat;
+  margin-top: -35px;
+  margin-bottom: 37px;
+}
 
 .statistics-start {
-  margin-top: 0;
-  margin-bottom: 0;
-
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
@@ -258,7 +356,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-top: 0;
+  margin-top: 37px;
   margin-bottom: 0;
   padding-left: 0;
 
@@ -267,6 +365,7 @@ input[type="radio"].visually-hidden {
 
 .statistics-list li {
   width: 105px;
+  margin-right: 14px;
 }
 
 .statistics-list b {
@@ -278,14 +377,15 @@ input[type="radio"].visually-hidden {
 
 .statistics-list p {
   line-height: 18px;
-  margin-top: 0;
+  margin-top: 15px;
   margin-bottom: 0;
 }
 
 .statistics-list sup {
   position: relative;
-  top: -10px;
-  left: 0;
+  top: -18px;
+  left: 1px;
+  font-size: 50%;
 }
 
 .partners-list {
@@ -299,7 +399,49 @@ input[type="radio"].visually-hidden {
   list-style-type: none;
 }
 
+.partners-list li {
+  position: relative;
+  width: 260px;
+  height: 180px;
+}
+
+.partners-list li::after {
+  content: "";
+  display: inline-block;
+  height: 52px;
+  position: absolute;
+  top: 64px;
+  right: -21px;
+
+  border-right: 2px solid #eeeeee;
+}
+
+.partners-list li:last-child::after {
+  border-right: none;
+}
+
+.partner-htmlacademy a {
+  margin-top: 65px;
+  margin-left: 31px;
+}
+
+.partner-borodinski a {
+  margin-top: 49px;
+  margin-left: 26px;
+}
+
+.partner-pink a {
+  margin-top: 66px;
+  margin-left: 38px;
+}
+
+.partner-mishka a {
+  margin-top: 54px;
+  margin-left: 45px;
+}
+
 .partners a {
+  display: block;
   opacity: 0.2;
 }
 
@@ -310,6 +452,11 @@ input[type="radio"].visually-hidden {
 
 .partners a:active {
   opacity: 0.1;
+}
+
+.address {
+  margin-top: 80px;
+  height: 415px; /*для подгона в PixelPerfect*/
 }
 
 .address-details b {
@@ -331,6 +478,8 @@ input[type="radio"].visually-hidden {
 .socials {
   display: flex;
   justify-content: flex-start;
+
+  margin-top: 70px;
 }
 
 .socials-list {
@@ -341,6 +490,14 @@ input[type="radio"].visually-hidden {
   padding-left: 0;
 
   list-style: none;
+}
+
+.socials-list li {
+  margin-right: 12px;
+}
+
+.socials-list li:last-child {
+  margin-right: 0;
 }
 
 .socials-list a {
@@ -370,9 +527,14 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
+.socials div {
+  margin-top: 8px;
+  margin-left: 142px;
+}
+
 .friendship-offer {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 8px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
@@ -386,10 +548,14 @@ input[type="radio"].visually-hidden {
 }
 
 .write-to-us {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   width: 960px;
+  padding: 30px 100px 80px;
 
-  background-color: green;
+  box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+  background-color: #fff;
 }
 
 .write-to-us-form {
@@ -401,6 +567,9 @@ input[type="radio"].visually-hidden {
 .write-to-us-form p {
   display: flex;
   flex-direction: column;
+
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .write-to-us .message-field,
@@ -413,6 +582,8 @@ input[type="radio"].visually-hidden {
   line-height: 45px;
   font-weight: 500;
   color: #000000;
+
+  margin-bottom: 40px;
 }
 
 .write-to-us label {
@@ -420,6 +591,13 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   font-weight: 700;
   color: #000000;
+
+  margin-bottom: 10px;
+}
+
+.write-to-us input {
+  width: 360px;
+  padding: 13px;
 }
 
 .write-to-us input,
@@ -432,6 +610,14 @@ input[type="radio"].visually-hidden {
   opacity: 0.5;
 
   outline: none;
+}
+
+.message-field {
+  padding-top: 34px;
+}
+
+.message-field textarea {
+  padding: 12px;
 }
 
 .write-to-us input:hover,
@@ -448,15 +634,23 @@ input[type="radio"].visually-hidden {
   border-color: #e74246;
 }
 
+.write-to-us .button {
+  margin-top: 47px;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+
 .exit {
   position: absolute;
   top:75px;
-  right: 90px;
+  right: 88px;
+  width: 21px;
+  height: 21px;
 
-  color: #fb565a;
   opacity: 0.3;
 
-  background-color: orange;
+  border: none;
+  background: 0 0 url("../img/close-cross.svg") no-repeat;
 }
 
 .exit:hover,
