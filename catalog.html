@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="inner-page">
-    <header>
+    <header class="gray-background">
       <nav class="main-navigation container">
         <a href="index.html" class="site-logo">
           <img src="img/nerds-logo.svg" alt="Логотип дизайн студии Нёрдс" width="160" height="65">
@@ -31,7 +31,7 @@
       </nav>
     </header>
 
-    <h1 class="shop-header container">Магазин готовых шаблонов</h1>
+    <h1 class="shop-header gray-background">Магазин готовых шаблонов</h1>
 
     <main class="content-wrapper container">
       <section class="site-to-go">
@@ -144,7 +144,7 @@
           <a href="catalog.html" class="page-nav-button current-button">1</a>
           <a href="#" class="page-nav-button">2</a>
           <a href="#" class="page-nav-button">3</a>
-          <a href="#" class="page-nav-button">Следующая</a>
+          <a href="#" class="page-nav-button next">Следующая</a>
         </nav>
       </section>
 
@@ -186,9 +186,8 @@
             <label for="benefits">Блок преимуществ</label>
           </p>
           <p>
-            <label>
-              <input class="filter-input" type="checkbox" name="news" checked>Новости
-            </label>
+            <input class="filter-input" type="checkbox" id="news" name="news" checked>
+            <label for="news">Новости</label>
           </p>
           <p>
             <input class="filter-input" type="checkbox" id="gallery" name="gallery">
@@ -207,7 +206,7 @@
       <section class="address">
         <h2 class="visually-hidden">Карта проезда</h2>
         <img src="img/map.jpg" alt="Схема проезда">
-        <div  class="address-details">
+        <div class="address-details">
           <b>NЁRDS DESIGN STUDIO</b>
           <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
           <p>тел. +7 (812) 275-75-75</p>
@@ -238,6 +237,7 @@
           <p class="sale">Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </section>
+
     </footer>
 
     <section class="write-to-us">
@@ -253,15 +253,15 @@
         </p>
         <p class="message-field">
           <label for="field-message">Текст письма:</label>
-          <textarea id="field-message" placeholder="В свободной форме" name="message" cols="50" rows="10"></textarea>
+          <textarea id="field-message" placeholder="В свободной форме" name="message" cols="50" rows="5"></textarea>
         </p>
         <span>
-          <button class="button">
-            Отправить
-          </button>
-        </span>
+      <button class="button">
+        Отправить
+      </button>
+    </span>
       </form>
-      <button type="button" class="exit">Закрыть</button>
+      <button type="button" class="exit" aria-label="Закрыть"></button>
     </section>
 
   </body>

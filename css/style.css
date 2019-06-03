@@ -50,8 +50,6 @@ input[type="radio"].visually-hidden {
   border-bottom: 2px solid #eeeeee;
 }
 
-
-
 .main-navigation {
   display: flex;
   align-items: flex-start;
@@ -68,6 +66,7 @@ input[type="radio"].visually-hidden {
 
 .main-navigation ul {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 26px;
   margin-bottom: 0;
   padding-left: 2px;
@@ -120,6 +119,7 @@ input[type="radio"].visually-hidden {
 }
 
 .current-menu a {
+  padding-bottom: 10px;
   border-bottom: 2px solid #fb565a;
 }
 
@@ -177,7 +177,7 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
 
   margin-top: 0;
-  margin-bottom: 80px;
+  margin-bottom: 0;
   padding-left: 0;
   list-style-type: none;
 }
@@ -195,9 +195,10 @@ input[type="radio"].visually-hidden {
 .service-list li {
   width: 300px;
   margin-right: 100px;
+  margin-bottom: 80px;
 }
 
-.service-list li:last-child {
+.service-list li:nth-child(3n) {
   margin-right: 0;
 }
 
@@ -228,6 +229,7 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
   border: none;
   min-width: 160px;
+  border-radius: 3px;
 
   padding: 16px 16px;
 
@@ -459,12 +461,23 @@ input[type="radio"].visually-hidden {
   height: 415px; /*для подгона в PixelPerfect*/
 }
 
+.inner-page .address {
+  margin-top: 60px;
+}
+
+.address-details {
+  padding: 50px 50px 47px;
+  width: 319px;
+}
+
 .address-details b {
+  display: block;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 .address-details p {
@@ -472,7 +485,12 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   color: #666666;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 15px;
+}
+
+.address .button {
+  margin-top: 22px;
+  width: 100%;
 }
 
 .socials {
@@ -528,7 +546,7 @@ input[type="radio"].visually-hidden {
 }
 
 .socials div {
-  margin-top: 8px;
+  margin-top: 6px;
   margin-left: 142px;
 }
 
@@ -668,7 +686,10 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   color: #000000;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 55px;
+  padding-top: 60px;
+  padding-bottom: 110px;
+  text-align: center;
 
   background-color: #eeeeee;
 }
@@ -694,10 +715,12 @@ input[type="radio"].visually-hidden {
 .form-wrapper fieldset {
   margin-left: 0;
   margin-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
+}
+
+.form-wrapper fieldset:first-child {
+  margin-top: 0;
+  padding-top: 50px;
 }
 
 .form-wrapper p {
@@ -705,19 +728,156 @@ input[type="radio"].visually-hidden {
   margin-bottom: 0;
 }
 
+.cost p {
+  height: 130px; /*временно*/
+}
+
 .cost input {
-  width: 31%;
+  width: 25%;
+}
+
+.set-header {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+
+  margin-bottom: 17px;
+}
+
+.grid-kind,
+.features-option,
+.cost {
+  border: none;
+}
+
+.grid-kind p,
+.features-option p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #283136;
+
+  margin-bottom: 20px;
+}
+
+.form-wrapper label {
+  padding-left: 36px;
+  position: relative;
+}
+
+.grid-kind {
+  margin-top: 35px;
+}
+
+.grid-kind input,
+.features-option input {
+  display: none;
+}
+
+.grid-kind input ~ label::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: -4px;
+  width: 25px;
+  height: 25px;
+  background: 0 0 url("../img/radio-off.svg") no-repeat;
+}
+
+.grid-kind input:checked ~ label::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: -4px;
+  width: 25px;
+  height: 25px;
+  background: 0 0 url("../img/radio-on.svg") no-repeat;
+}
+
+.features-option input ~ label::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: -4px;
+  width: 23px;
+  height: 23px;
+  background: 0 0 url("../img/checkbox-off.svg") no-repeat;
+}
+
+.features-option input:checked ~ label::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: -4px;
+  width: 27px;
+  height: 23px;
+  background: 0 0 url("../img/checkbox-on.svg") no-repeat;
+}
+
+.grid-kind p:last-child,
+.features-option p:last-child {
+  margin-bottom: 0;
+}
+
+.features-option {
+  margin-top: 45px;
+}
+
+.form-button {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+  border: none;
+  margin-top: 49px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  outline: none;
+
+  background-color: #eeeeee;
+}
+
+.form-button:hover,
+.form-button:focus,
+.page-nav-button:hover,
+.page-nav-button:focus {
+  background-color: #dfdfdf;
+}
+
+.page-nav-button:hover,
+.page-nav-button:focus {
+  border-color: #dfdfdf;
+}
+
+.page-nav-button:active {
+  border-top-color: #959595;
+
+  background-color: #d5d5d5;
+  box-shadow: inset 0 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.form-button:active {
+  color: #959595;
+
+  background-color: #d5d5d5;
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
 .sorting-list {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .sorting-list ul {
   display: flex;
   margin-top: 0;
   margin-bottom: 0;
+
+  list-style-type: none;
 }
 
 .sorting-list b {
@@ -728,8 +888,12 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.sorting-list ul {
-  list-style-type: none;
+.sorting-list li {
+  margin-right: 30px;
+}
+
+.sorting-list li:last-child {
+  margin-right: 0;
 }
 
 .sorting-list a {
@@ -752,15 +916,7 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
-legend {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.templates-list{
+.templates-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -772,7 +928,55 @@ legend {
 }
 
 .templates-list li {
+  margin-bottom: 33px;
+}
+
+.templates-list li {
+  margin-bottom: 33px;
+}
+
+.templates-list article {
+  text-align: center;
   width: 360px;
+  height: 616px;
+  padding-top: 40px;
+  position: relative;
+}
+
+.templates-list article:hover,
+.templates-list article:focus {
+  box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
+}
+
+.templates-list article:hover .browser,
+.templates-list article:focus .browser {
+  opacity: 1;
+}
+
+.browser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 40px;
+  background: 0 0 url("../img/browser.svg") no-repeat;
+  opacity: 0.12;
+}
+
+.browser-hover {
+  display: none;
+}
+
+.templates-list article:hover .browser-hover,
+.templates-list article:focus .browser-hover {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 360px;
+  height: 231px;
+
+  background-color: #eeeeee;
 }
 
 .template-header {
@@ -802,24 +1006,13 @@ legend {
   color: #666666;
 }
 
-.templates-list article {
-  text-align: center;
-  width: 360px;
-}
-
-.templates-list article:hover,
-.templates-list article:focus {
-  box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
-}
-
-.browser {
-  background: url("../img/browser.svg") 0 0 no-repeat;
-  padding-top: 40px;
-  opacity: 0.12;
-  width: 360px;
+.pagination {
+  margin-top: 30px;
 }
 
 .page-nav-button {
+  display: inline-block;
+  vertical-align: middle;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -827,8 +1020,20 @@ legend {
   text-align: center;
   color: #000000;
   text-decoration: none;
+  padding: 12px 16px;
+  margin-right: 11px;
 
   background-color: #eeeeee;
+  border: 3px solid #eeeeee;
+}
+
+.page-nav-button:last-child {
+  margin-right: 0;
+}
+
+.pagination .next {
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .current-button {
@@ -842,51 +1047,3 @@ legend {
 
   background-color: #ffffff;
 }
-
-fieldset {
-  border: none;
-}
-
-.set-header {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.grid-kind p,
-.features-option p {
-  font-size: 16px;
-  line-height: 20px;
-  color: #283136;
-}
-
-.form-button {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #000000;
-  border: none;
-
-  outline: none;
-
-  background-color: #eeeeee;
-}
-
-.form-button:hover,
-.form-button:focus,
-.page-nav-button:hover,
-.page-nav-button:focus {
-  background-color: #dfdfdf;
-}
-
-.form-button:active,
-.page-nav-button:active {
-  color: #959595;
-
-  background-color: #d5d5d5;
-  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
-}
-
