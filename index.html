@@ -35,7 +35,7 @@
 
 <main>
   <div class="sliders gray-background">
-    <div class="slider-1 active container ">
+    <div class="slider-1 current-slide container ">
       <b>
         Долго, дорого,<br>скрупулезно.
       </b>
@@ -56,8 +56,8 @@
       <p>Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается</p>
       <a href="slide-3.html" class="button">Узнать больше</a>
     </div>
-    <div>
-      <a href="slide-1.html" class="slider-button">
+    <div class="sliders-switch">
+      <a href="slide-1.html" class="slider-button current-switch">
         <img src="img/filter-button.svg" alt="Слайдер 1: Математический дизайн" width="20" height="23">
       </a>
       <a href="slide-2.html" class="slider-button">
@@ -158,7 +158,7 @@
   </section>
 </main>
 
-<footer class="container">
+<footer class="footer container">
   <section class="address">
     <h2 class="visually-hidden">Карта проезда</h2>
     <img src="img/map.jpg" alt="Схема проезда">
@@ -196,29 +196,31 @@
 
 </footer>
 
-<section class="write-to-us">
-  <h2>Напишите нам</h2>
-  <form class="write-to-us-form" action="" method="post">
-    <p>
-      <label for="field-name">Ваше имя:</label>
-      <input type="text" id="field-name" name="name" placeholder="Имя Фамилия">
-    </p>
-    <p>
-      <label for="field-email">Ваш e-mail:</label>
-      <input type="email" id="field-email" name="email" placeholder="email@example.com">
-    </p>
-    <p class="message-field">
-      <label for="field-message">Текст письма:</label>
-      <textarea id="field-message" placeholder="В свободной форме" name="message" cols="50" rows="5"></textarea>
-    </p>
-    <span>
-      <button class="button">
-        Отправить
-      </button>
-    </span>
-  </form>
-  <button type="button" class="exit" aria-label="Закрыть"></button>
-</section>
+<div class="modal">
+  <section class="write-to-us">
+    <h2>Напишите нам</h2>
+    <form class="write-to-us-form" action="" method="post">
+      <p>
+        <label for="field-name">Ваше имя:</label>
+        <input type="text" id="field-name" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="field-email">Ваш e-mail:</label>
+        <input type="email" id="field-email" name="email" placeholder="email@example.com">
+      </p>
+      <p class="message-field">
+        <label for="field-message">Текст письма:</label>
+        <textarea id="field-message" placeholder="В свободной форме" name="message" cols="50" rows="5"></textarea>
+      </p>
+      <span>
+        <button class="button">
+          Отправить
+        </button>
+      </span>
+    </form>
+    <button type="button" class="exit" aria-label="Закрыть"></button>
+  </section>
+</div>
 
 </body>
 </html>
