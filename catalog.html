@@ -18,16 +18,16 @@
             <a href="index.html">Студия</a>
           </li>
           <li>
-            <a href="clients.html">Клиенты</a>
+            <a href="#">Клиенты</a>
           </li>
           <li>
             <a href="catalog.html" class="active">Магазин</a>
           </li>
           <li>
-            <a href="contacts.html">Контакты</a>
+            <a href="#">Контакты</a>
           </li>
         </ul>
-        <a href="cart.html" class="cart">Корзина</a>
+        <a href="#" class="cart">Корзина</a>
       </nav>
     </header>
 
@@ -65,12 +65,12 @@
             <article>
               <a href="#" class="template-item">
                 <div class="browser"></div>
-                <img src="img/sedona.jpg" alt="Sedona" width="360" height="576">
+                <img src="img/sedona.jpg" alt="Информационный сайт для туристов" width="360" height="576">
               </a>
               <div class="browser-hover">
                 <h3><a class="template-header" href="#">Sedona</a></h3>
                 <p>Информационный сайт для туристов</p>
-                <a href="cart.html" class="button">9 900 руб.</a>
+                <a href="#" class="button">9 900 руб.</a>
               </div>
             </article>
           </li>
@@ -78,12 +78,12 @@
             <article>
               <a href="#"  class="template-item">
                 <div class="browser"></div>
-                <img src="img/pink.jpg" alt="Pink" width="360" height="576">
+                <img src="img/pink.jpg" alt="Продуктовый лендинг приложений для iOS и Android" width="360" height="576">
               </a>
               <div class="browser-hover">
                 <h3><a class="template-header" href="#">Pink APP</a></h3>
                 <p>Продуктовый лендинг приложений для iOS и Android</p>
-                <a href="cart.html" class="button">9 900 руб.</a>
+                <a href="#" class="button">9 900 руб.</a>
               </div>
             </article>
           </li>
@@ -91,12 +91,12 @@
             <article>
               <a href="#" class="template-item">
                 <div class="browser"></div>
-                <img src="img/barbershop.jpg" alt="Borodinski" width="360" height="576">
+                <img src="img/barbershop.jpg" alt="Сайт салона красоты для мужчин." width="360" height="576">
               </a>
               <div class="browser-hover">
                 <h3><a class="template-header" href="#">Barbershop</a></h3>
                 <p>Сайт салона красоты.<br>Для мужчин, да.</p>
-                <a href="cart.html" class="button">9 900 руб.</a>
+                <a href="#" class="button">9 900 руб.</a>
               </div>
             </article>
           </li>
@@ -104,12 +104,12 @@
             <article>
               <a href="#" class="template-item">
                 <div class="browser"></div>
-                <img src="img/mishka.jpg" alt="Mishka" width="360" height="576">
+                <img src="img/mishka.jpg" alt="Интернет-магазин вязаных игрушек" width="360" height="576">
               </a>
               <div class="browser-hover">
                 <h3><a class="template-header" href="#">Mishka</a></h3>
                 <p>Интернет-магазин вязаных игрушек</p>
-                <a href="cart.html" class="button">9 900 руб.</a>
+                <a href="#" class="button">9 900 руб.</a>
               </div>
             </article>
           </li>
@@ -117,12 +117,12 @@
             <article>
               <a href="#" class="template-item">
                 <div class="browser"></div>
-                <img src="img/aplus.jpg" alt="A+" width="360" height="576">
+                <img src="img/aplus.jpg" alt="Лендинг курсов повышения квалификации" width="360" height="576">
               </a>
               <div class="browser-hover">
                 <h3><a class="template-header" href="#">A plus</a></h3>
                 <p>Лендинг курсов повышения квалификации</p>
-                <a href="cart.html" class="button">9 900 руб.</a>
+                <a href="#" class="button">9 900 руб.</a>
               </div>
             </article>
           </li>
@@ -130,12 +130,12 @@
             <article>
               <a href="#" class="template-item">
                 <div class="browser"></div>
-                <img src="img/kvast.jpg" alt="Kvast" width="360" height="576">
+                <img src="img/kvast.jpg" alt="Промо-сайт производителя крафтового кваса" width="360" height="576">
               </a>
               <div class="browser-hover">
                 <h3><a class="template-header" href="#">Кваст</a></h3>
                 <p>Промо-сайт производителя крафтового кваса</p>
-                <a href="cart.html" class="button">9 900 руб.</a>
+                <a href="#" class="button">9 900 руб.</a>
               </div>
             </article>
           </li>
@@ -151,13 +151,20 @@
       <form class="form-wrapper" method="post">
         <fieldset class="cost">
           <legend class="set-header">Стоимость:</legend>
-          <p>
-            <label>От
-              <input type="number" name="cost-from" placeholder="0" value="0">
-            </label>
-            <label>До
-              <input type="number" name="cost-from" placeholder="15 000" value="15000">
-            </label>
+          <p class="cost-toggler">
+            <input type="range" class="cost-range" id="cost-range" min="0" max="15000">
+            <label for="cost-range"></label>
+            <span class="cost-line"></span>
+          </p>
+          <p class="cost-numbers">
+            <span>
+              <label for="cost-from">От</label>
+              <input type="text" id="cost-from" class="cost-field" name="cost-from" placeholder="0" value="0">
+            </span>
+            <span>
+              <label for="cost-for">До</label>
+              <input type="text" id="cost-for" class="cost-field" name="cost-from" placeholder="15 000" value="15000">
+            </span>
           </p>
         </fieldset>
         <fieldset class="grid-kind">
@@ -202,18 +209,21 @@
       </form>
     </main>
 
-    <footer class="footer container">
+    <footer class="footer">
       <section class="address">
         <h2 class="visually-hidden">Карта проезда</h2>
-        <img src="img/map.jpg" alt="Схема проезда">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715702567!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2snl!4v1560100108171!5m2!1sru!2snl" width="1440" height="416" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        <img src="img/map.jpg" alt="Офис компании по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="1440" height="416">
         <div class="address-details">
           <b>NЁRDS DESIGN STUDIO</b>
           <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
           <p>тел. +7 (812) 275-75-75</p>
-          <a href="#" class="button">Напишите нам</a>
+          <a href="write-to-us.html" class="button modal-link">Напишите нам</a>
         </div>
       </section>
-      <section class="socials">
+      <section class="socials container">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="socials-list">
           <li>
@@ -265,6 +275,8 @@
         <button type="button" class="exit" aria-label="Закрыть"></button>
       </section>
     </div>
+
+  <script src="js/script.js"></script>
 
   </body>
 </html>
