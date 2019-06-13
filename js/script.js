@@ -36,3 +36,23 @@ form.addEventListener("submit", function (evt) {
     popup.classList.add("modal-error");
   }
 });
+
+ymaps.ready(function(){
+  var map = new ymaps.Map(document.querySelector(".map"), {
+    center: [59.938631, 30.323055],
+    zoom: 17,
+    controls: []
+  });
+
+  map.behaviors.disable('scrollZoom');
+
+  var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: "img/map-marker.png",
+    iconImageSize: [231, 190],
+    iconImageOffset: [-50, -200]
+  });
+
+  map.geoObjects
+    .add(myPlacemark);
+});
