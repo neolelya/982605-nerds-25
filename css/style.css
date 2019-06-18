@@ -120,7 +120,7 @@ input[type="radio"].visually-hidden {
 }
 
 .active {
-  padding-bottom: 10px;
+  padding-bottom: 9px;
   border-bottom: 2px solid #fb565a;
 }
 
@@ -150,14 +150,25 @@ input[type="radio"].visually-hidden {
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
+.all-slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
 .sliders b {
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
-  display: inline-block;
+  display: block;
   margin-top: 60px;
   margin-bottom: 26px;
-  vertical-align: middle;
   color: #000000;
 }
 
@@ -167,10 +178,8 @@ input[type="radio"].visually-hidden {
 }
 
 .sliders a {
-  display: inline-block;
   padding-right: 55px;
   padding-left: 55px;
-  vertical-align: middle;
 }
 
 .slider {
@@ -401,25 +410,23 @@ input[type="radio"].visually-hidden {
   font-size: 45px;
   font-weight: 500;
   line-height: 45px;
-  display: inline-block;
+  display: block;
   margin-bottom: 33px;
-  vertical-align: middle;
   color: #000000;
 }
 
 .information p {
   width: 660px;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .information-offer {
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
-  display: inline-block;
+  display: block;
   margin-bottom: 24px;
-  vertical-align: middle;
   text-transform: uppercase;
   color: #000000;
 }
@@ -432,16 +439,17 @@ input[type="radio"].visually-hidden {
 }
 
 .information-offer-list li {
+  position: relative;
   margin-bottom: 24px;
+  padding-left: 36px;
 }
 
 .information-offer-list li::before {
-  display: inline-block;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
   width: 26px;
-  margin-right: 11px;
-  margin-bottom: 5px;
   content: "";
-  vertical-align: middle;
   border: 1px solid #fb565a;
 }
 
@@ -479,6 +487,13 @@ input[type="radio"].visually-hidden {
 }
 
 .statistics-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 105px;
   margin-right: 14px;
 }
@@ -487,9 +502,7 @@ input[type="radio"].visually-hidden {
   font-size: 45px;
   font-weight: 700;
   line-height: 1.2;
-  display: inline-block;
   margin-bottom: 15px;
-  vertical-align: middle;
   color: #000000;
 }
 
@@ -500,9 +513,9 @@ input[type="radio"].visually-hidden {
 }
 
 .statistics-list sup {
-  font-size: 50%;
+  font-size: 55%;
   position: relative;
-  top: -18px;
+  top: -16px;
   left: 1px;
 }
 
@@ -601,7 +614,7 @@ input[type="radio"].visually-hidden {
   top: 55px;
   left: 95px;
   width: 319px;
-  padding: 47px 50px 47px;
+  padding: 48px 50px 47px;
   background-color: #ffffff;
 }
 
@@ -610,7 +623,7 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   line-height: 30px;
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   text-transform: uppercase;
   color: #000000;
 }
@@ -623,19 +636,9 @@ input[type="radio"].visually-hidden {
   color: #666666;
 }
 
-.address::after {
-  position: absolute;
-  top: 90px;
-  left: 775px;
-  width: 231px;
-  height: 190px;
-  content: "";
-  background: 0 0 url(../img/map-marker.png) no-repeat;
-}
-
 .address .button {
   width: 100%;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .address .map {
@@ -644,6 +647,7 @@ input[type="radio"].visually-hidden {
   top: 0;
   left: 0;
   width: 100%;
+  min-width: 1160px;
   height: 416px;
 }
 
@@ -710,7 +714,7 @@ input[type="radio"].visually-hidden {
 }
 
 .socials div {
-  margin-top: 6px;
+  margin-top: 5px;
   margin-left: 142px;
 }
 
@@ -719,7 +723,7 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   line-height: 36px;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: #000000;
 }
 
@@ -753,10 +757,9 @@ input[type="radio"].visually-hidden {
   top: 50%;
   left: 50%;
   width: 960px;
+  margin-top: -300px;
+  margin-left: -480px;
   padding: 30px 100px 80px;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   background-color: #ffffff;
   -webkit-box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
   box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
@@ -879,12 +882,30 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-error .write-to-us {
-  -webkit-box-shadow: 0 0 5px 5px rgba(251, 86, 90, 0.7);
-  box-shadow: 0 0 5px 5px rgba(251, 86, 90, 0.7);
+  -webkit-animation-name: error;
+  animation-name: error;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
 }
 
-.modal-error .write-to-us input,
-.modal-error .write-to-us textarea {
+@-webkit-keyframes error {
+  0%, 100% {-webkit-transform: translateY(0); transform: translateY(0);}
+  10%,50%, 90% {-webkit-transform: translateY(10px); transform: translateY(10px);}
+  30%, 70% {-webkit-transform: translateY(-10px); transform: translateY(-10px);}
+}
+@keyframes error {
+  0%, 100% {-webkit-transform: translateY(0); transform: translateY(0);}
+  10%,50%, 90% {-webkit-transform: translateY(10px); transform: translateY(10px);}
+  30%, 70% {-webkit-transform: translateY(-10px); transform: translateY(-10px);}
+}
+
+.modal-error input:-ms-input-placeholder,
+.modal-error textarea:-ms-input-placeholder {
+  box-shadow: 0 0 5px 5px rgba(251, 86, 90, 0.8);
+}
+
+.modal-error input:placeholder-shown,
+.modal-error textarea:placeholder-shown {
   -webkit-box-shadow: 0 0 5px 5px rgba(251, 86, 90, 0.8);
   box-shadow: 0 0 5px 5px rgba(251, 86, 90, 0.8);
 }
@@ -1097,14 +1118,6 @@ input[type="range"]:active ~ label::before {
   margin-top: 0;
 }
 
-.radio-input,
-.checkbox-input {
-  display: block;
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-
 .radio-input + label::before {
   position: absolute;
   top: -4px;
@@ -1235,7 +1248,7 @@ input[type="range"]:active ~ label::before {
 }
 
 .sorting-list li:not(:last-child) {
-  margin-left: 28px;
+  margin-left: 27px;
 }
 
 .sorting-list img:last-child {
@@ -1317,7 +1330,6 @@ input[type="range"]:active ~ label::before {
   width: 360px;
   min-height: 231px;
   padding: 28px 80px 40px;
-  -webkit-transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
