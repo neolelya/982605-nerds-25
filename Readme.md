@@ -2,11 +2,13 @@
 
 Nerds is a website for a design studio that develops websites, mobile apps and creates slideshows and presentation videos.
 
+
 ## Used technologies: 
 * HTML
 * CSS (used flex-boxes for page grid)
 * JS
 * Progressive enhancement
+
 
 ## Cross-browser compatibility
 * Chrome 
