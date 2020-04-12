@@ -5,6 +5,7 @@ Nerds is a website for a design studio that develops websites, mobile apps and c
 ## Used technologies: 
 * HTML
 * CSS (used flex-boxes for page grid)
+* JS
 * Progressive enhancement
 
 ## Cross-browser compatibility
